@@ -1,0 +1,20 @@
+public class CatTest {
+
+	public static void main(String[] args) {
+		Cat cat1 = new Cat();
+		Cat cat2 = new Cat("Charlie", 8, "Bobtail");
+		Cat cat3 = new Cat();
+
+		System.out.println(cat1);
+		System.out.println(cat2);
+		System.out.println(cat3);
+		
+		System.out.println(cat1.equals(cat3)); // expected true
+		System.out.println(cat2.equals(cat1)); // expected false
+		cat3.setName("Filbert");
+		System.out.println(cat1.equals(cat3)); // excepted false
+
+		cat2.meow();
+	}
+
+}
